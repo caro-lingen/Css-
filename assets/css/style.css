@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    grid-template-areas: "nav" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 60px;
+    min-height: 100vh;
+}
+body nav{
+    grid-area: nav;
+    display: flex;
+    background-color: black;
+    color: darksalmon;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px;
+    :hover{
+        cursor: pointer;
+    }
+}
+nav img{
+    width: 200px;
+    padding: 7px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+   }
+
+body main{
+grid-area: main;
+background-color: bisque;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding: 6px;
+flex-flow: row wrap;
+align-items: center;
+justify-content: center;
+transition: all .4s ease-in-out;
+:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+ }
+
+main img{
+    width: 150px;      
+}
+    
+main card{
+  
+    background-color: white;
+    padding-bottom: 5px;
+    padding: 8px;
+    margin: 8px;
+    align-items: center;
+    justify-content: center;
+    }
+
+main button{
+    padding: 4px;
+    background-color: darksalmon;
+    border-radius: 10%;
+    border: solid 1px black;
+    
+    }
+
+    footer{
+        grid-area: footer;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: darksalmon;
+    }
+    footer img{
+        width: 100px;
+    }
+
+    @media (min-width:992px){
+        body{
+            grid-template-areas: 
+            "nav main"
+            "nav main"
+            "nav footer";
+            grid-template-columns: 120px 1fr;
+            grid-template-rows: 70px 1fr;
+        }
+   
+
+    body main{
+        display: flex; 
+      gap: 10px;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    nav img{
+    width: 100px;
+    object-fit: cover;
+    padding: 7px;
+    }
+
+    body nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
